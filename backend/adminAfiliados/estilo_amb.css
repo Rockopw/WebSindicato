@@ -1,0 +1,104 @@
+/* FONDO GENERAL */
+body {
+    
+    background: linear-gradient(135deg, #e0f2fe, #022d3d) !important;
+   
+}
+
+.btn-kit {
+  color: #f2f5fa;            /* azul Bootstrap */
+  border-color: rgb(43, 72, 104);
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: rgb(43, 72, 104);
+}
+
+.btn-kit:hover {
+  background-color: rgb(102, 170, 243);
+  color: #ffffff;
+  
+}
+
+/* Encabezado DataTable */
+table.dataTable thead th {
+  background-color:rgb(43, 72, 104) ; /* gris oscuro */
+  color: #ffffff ;
+  
+}
+
+.btn-primary {
+   background-color: #ffe5b4;   /* naranja pastel */
+  color: #7a4a00;
+  border: 1px solid #ffd08a;
+ 
+
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.btn-primary:hover {
+  background-color: #ffd59e;
+  color: #5c3900;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(54, 54, 54, 0.15);
+
+}
+
+
+.footer  {
+  background-color:rgba(2, 29, 58, 0.93);
+  color:#e3e8ee83;  
+  padding: 20px 10px;
+  text-align: center;
+   
+}
+
+.btn-logout {
+  background-color: #f8d7da;     /* rojo suave */
+  color: #842029;
+ 
+  font-weight: 600;
+
+  padding: 8px 18px;
+  border-radius: 25px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: #f1b0b7;
+  color: #58151c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-logout:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+ .admin-nombre {
+  background: linear-gradient(135deg, #f8f9fa, #dee2e6);
+  color: #212529;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  
+}
+.table-primary {
+    background-color: #e2d9f3 !important;
+    color: #4a3f75;
+}
+
+/*centro el total a comprar*/
+table.dataTable tfoot td {
+    text-align: center !important;
+}

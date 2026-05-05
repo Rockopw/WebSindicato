@@ -1,0 +1,629 @@
+/* Variables CSS para colores y sombras - Estilo Rústico de Bosque */
+:root {
+    --primary-color: #0a83e6; /* Verde Bosque profundo */
+    --secondary-color: #030035; /* Marrón Silla de Montar (SaddleBrown) */
+    --accent-color: #16d1b2; /* Naranja Calabaza (Chocolate) - para acentos cálidos */
+    --text-dark: #362D26; /* Marrón Oscuro para texto principal */
+    --text-light: #F0EAD6; /* Crema/Beige para texto claro */
+    --background-main: #FDFBF5; /* Fondo general muy claro, casi blanco roto */
+    --background-card: #b0f8de27; /* Fondo de tarjetas más cálido, beige */
+    --border-color: #1c118386; /* Borde sutil, tono tierra */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --border-radius-soft: 8px; /* Bordes suavemente redondeados */
+    --border-radius-round: 25px; /* Más redondeado para botones */
+    --transition-speed: 0.3s ease-in-out;
+}
+
+/* --- Base Styles --- */
+body {
+    font-family: 'Montserrat', sans-serif; /* Fuente moderna para cuerpo */
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-main);
+    color: var(--text-dark);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Añadir una fuente para títulos que tenga un toque rústico */
+h1, h2, h3 {
+    font-family: 'Lora', serif; /* Fuente con serifa, elegante y con aire rústico */
+    color: var(--secondary-color); /* Marrón para títulos */
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 4em;
+    color: var(--text-light); /* En la hero section, el título es claro */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+h2 {
+    font-size: 2.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espacio entre título e ícono */
+}
+
+h2 i {
+    color:#03003569; /* Íconos en títulos de sección, verde bosque */
+    font-size: 0.9em; /* Ícono ligeramente más pequeño que el texto */
+}
+
+p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    color:rgb(1, 16, 29);
+}
+p2 {
+    color:rgba(230, 236, 241, 0.267);
+}
+/* --- Top Bar (Header) --- */
+.top-bar {
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color)); /* Degradado de marrón a verde */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-light);
+    box-shadow: 0 4px 15px var(--shadow-medium);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    backdrop-filter: blur(3px); /* Desenfoque sutil */
+    border-bottom: 2px solid var(--accent-color); /* Borde acento cálido */
+}
+
+.top-bar .logo img {
+    height: 55px; /* Ajuste para el tamaño del logo */
+    /* Si logo.jpg es cuadrado, puedes usar border-radius: 50%; para hacerlo redondo */
+    /* Si es rectangular, quita border-radius: 50%; para mantener su forma */
+    border-radius: var(--border-radius-soft); /* Un poco de redondez al logo */
+    border: 3px solid var(--text-light);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 35px;
+}
+
+.main-nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 0;
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color); /* Acento verde claro */
+    transition: width var(--transition-speed);
+}
+
+.main-nav a:hover {
+    color: var(--accent-color); /* Color acento al pasar el mouse */
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Menú hamburguesa para móviles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 2.2em;
+    cursor: pointer;
+    transition: transform var(--transition-speed);
+}
+.menu-toggle:hover {
+    transform: scale(1.1);
+    color: var(--accent-color);
+}
+
+/* --- Hero Section (Bienvenida) --- */
+.hero-section {
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/portada.jpg') no-repeat center center/cover; /* Imagen de fondo menu.jpg */
+   /* color: var(--text-light);*/
+    padding: 120px 20px; /* Más padding para que la imagen se vea bien */
+    border-radius: var(--border-radius-soft);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /*background: rgba(0, 0, 0, 0.3); /* Capa oscura para mejor legibilidad del texto */
+    z-index: 1;
+}
+
+.hero-section h1, .hero-section p, .hero-section .btn-primary {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 4.5em; /* Título aún más grande */
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.6em;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color:rgba(209, 198, 178, 0.274)
+}
+
+/* --- Buttons --- */
+.btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 35px; /* Botones más grandes */
+    border-radius: var(--border-radius-round); /* Muy redondeados */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.15em;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0 5px 15px var(--shadow-medium); /* Sombra más pronunciada */
+    border: none; /* Eliminar bordes predeterminados */
+}
+
+.btn-primary {
+    background-color: var(--primary-color); /* Verde Bosque */
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: #003392; /* azul un poco más oscuro */
+    transform: translateY(-5px); /* Efecto de elevación más notable */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.btn-secondary {
+    background-color: var(--primary-color); /* Naranja Cálido */
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: #003392; /* azul un poco más oscuro */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* --- Cabañas Section --- */
+.cabanas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Cabañas un poco más grandes */
+    gap: 35px;
+    margin-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.cabana-card {
+    background-color: var(--background-card); /* Fondo beige cálido para las tarjetas */
+    border-radius: var(--border-radius-soft);
+    box-shadow: 0 6px 18px var(--shadow-light);
+    overflow: hidden;
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    border: 1px solid var(--border-color); /* Borde sutil, tono tierra */
+}
+
+.cabana-card:hover {
+    transform: translateY(-10px); /* Efecto de elevación más pronunciado */
+    box-shadow: 0 12px 30px var(--shadow-medium);
+}
+
+.cabana-card img {
+    width: 100%;
+    height: 250px; /* Imágenes más altas */
+    object-fit: cover;
+    border-bottom: 2px solid var(--primary-color); /* Borde verde en la parte inferior de la imagen */
+    transition: transform 0.5s ease;
+}
+.cabana-card:hover img {
+    transform: scale(1.08); /* Zoom más pronunciado */
+}
+
+.cabana-card h3 {
+    margin: 25px 0 15px 0;
+    color: var(--secondary-color); /* Marrón para títulos de cabaña */
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.cabana-card h3 i {
+    color: var(--primary-color); /* Ícono de cabaña en verde bosque */
+    font-size: 1.2em;
+}
+
+.cabana-card p {
+    font-size: 1em;
+    color: #555;
+    padding: 0 25px 25px 25px;
+    margin: 0;
+}
+
+/* --- Reservas Section (Interactive) --- */
+.reservas-section {
+    background-color: var(--background-card); /* Fondo de sección de reservas más cálido */
+    padding: 50px;
+    border-radius: var(--border-radius-soft);
+    box-shadow: 0 8px 20px var(--shadow-light);
+}
+
+.reservation-form-container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: var(--background-main); /* Fondo claro para el formulario dentro de la sección */
+    border-radius: var(--border-radius-soft);
+    box-shadow: 0 5px 15px var(--shadow-medium);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-end;
+    border: 2px solid var(--border-color); /* Borde rústico para el formulario */
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 30px);
+    min-width: 300px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1.1em;
+}
+
+.form-group input[type="date"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 14px 18px; /* Inputs más grandes y con más padding */
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-soft);
+    box-sizing: border-box;
+    font-size: 1.05em;
+    color: var(--text-dark);
+    background-color: var(--text-light); /* Fondo claro para los inputs */
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.form-group input[type="date"]:focus,
+.form-group input[type="number"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.3rem rgba(74, 107, 74, 0.3); /* Sombra de enfoque verde bosque */
+    outline: none;
+}
+
+#check-availability-btn {
+    flex-grow: 1;
+    min-width: 220px;
+}
+
+.results-box {
+    width: 100%;
+    background-color: rgba(74, 107, 74, 0.1); /* Fondo muy claro del color primario */
+    border: 2px dashed var(--primary-color);
+    border-radius: var(--border-radius-soft);
+    padding: 30px;
+    margin-top: 30px;
+    display: none;
+    box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+.results-box h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 1.4em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.results-box p {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#available-cabanas-list {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#available-cabanas-list li {
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 1.05em;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#available-cabanas-list li i {
+    color: var(--primary-color);
+}
+
+#confirm-reservation-btn {
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* --- Info Sections (Ubicación, Contacto) --- */
+.info-section {
+    text-align: center;
+    background-color: var(--background-card); /* Fondo de sección más cálido */
+    border: 1px solid var(--border-color);
+}
+
+.info-section h2 {
+    color: var(--secondary-color);
+}
+
+.info-section h2 i {
+    color:#03003569; /* Íconos de título de sección en color acento */
+    font-size: 1.2em;
+}
+
+.info-section p i {
+    margin-right: 10px;
+    color: var(--primary-color); /* Íconos en párrafos en verde bosque */
+    font-size: 1.1em;
+
+}
+
+.map-placeholder {
+    margin-top: 35px;
+    background-color: #e0e0e0;
+    height: 480px; /* Mapa un poco más grande */
+    border-radius: var(--border-radius-soft);
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    border: 2px solid var(--border-color); /* Borde rústico para el mapa */
+}
+
+.map-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--secondary-color); /* Marrón oscuro para el footer */
+    color: var(--text-light);
+    margin-top: 50px;
+    font-size: 0.95em;
+    border-top-left-radius: var(--border-radius-soft);
+    border-top-right-radius: var(--border-radius-soft);
+    box-shadow: 0 -4px 15px var(--shadow-medium);
+}
+
+/* --- Responsive Design (Media Queries) --- */
+@media (max-width: 992px) {
+    .container {
+        padding: 20px;
+        padding-top: 90px;
+    }
+    section {
+        padding: 40px;
+    }
+    .hero-section h1 {
+        font-size: 3.5em;
+    }
+    .hero-section p {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+    .cabanas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    .cabana-card img {
+        height: 200px;
+    }
+    .top-bar .logo img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 85px; /* Ajuste para la altura de la nueva top-bar */
+        left: 0;
+        background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+        box-shadow: 0 4px 10px var(--shadow-medium);
+        z-index: 999;
+        padding: 10px 0;
+        border-bottom-left-radius: var(--border-radius-soft);
+        border-bottom-right-radius: var(--border-radius-soft);
+    }
+    .main-nav.active {
+        display: flex;
+    }
+    .main-nav ul {
+        flex-direction: column;
+    }
+    .main-nav li {
+        margin: 0;
+        width: 100%;
+    }
+    .main-nav a {
+        display: block;
+        padding: 15px 25px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .main-nav li:last-child a {
+        border-bottom: none;
+    }
+    .main-nav a::after {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .top-bar {
+        padding: 12px 20px;
+    }
+    .container {
+        padding: 15px;
+        padding-top: 85px;
+    }
+    section {
+        padding: 30px;
+        margin-bottom: 25px;
+    }
+    .hero-section {
+        padding: 80px 15px;
+    }
+    .hero-section h1 {
+        font-size: 3em;
+    }
+    .hero-section p {
+        font-size: 1.2em;
+    }
+    .btn-primary, .btn-secondary {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .cabanas-grid {
+        grid-template-columns: 1fr;
+    }
+    .cabana-card img {
+        height: 220px;
+    }
+    .reservation-form-container {
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+    }
+    .form-group {
+        flex: 1 1 100%;
+    }
+    .map-placeholder {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .top-bar .logo img {
+        height: 45px;
+    }
+    .menu-toggle {
+        font-size: 2em;
+    }
+    .container {
+        padding: 10px;
+        padding-top: 75px;
+    }
+    section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+    .hero-section p {
+        font-size: 1.05em;
+    }
+    h2 {
+        font-size: 2em;
+        gap: 10px;
+    }
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .cabana-card h3 {
+        font-size: 1.2em;
+        gap: 8px;
+    }
+    .cabana-card img {
+        height: 180px;
+    }
+    .reservation-form-container {
+        padding: 20px;
+    }
+    .form-group label {
+        font-size: 0.95em;
+    }
+    .form-group input[type="date"],
+    .form-group input[type="number"] {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+    .results-box {
+        padding: 20px;
+    }
+    .map-placeholder {
+        height: 300px;
+    }
+    footer {
+        padding: 15px;
+        font-size: 0.85em;
+    }
+

@@ -1,0 +1,78 @@
+
+
+.card.p-4.shadow { 
+   border: 3px solid #038b25;
+  border-radius: 8px;
+   box-shadow: 0 0 15px #00ff4049,
+              inset 0 0 10px rgba(0,255,65,0.3);
+              animation: flicker 3s infinite;
+}
+
+
+
+
+
+
+
+.btn-logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background: linear-gradient(135deg, #fd0404, #530202);
+  color: #4cfe05;
+  font-weight: 600;
+
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: none;
+  text-decoration: none;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+} 
+
+.btn-logout:hover {
+  background: linear-gradient(135deg, #02f802, #074a01);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  color: #fff;
+}
+
+.btn-logout:active {
+  transform: scale(0.96);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+
+
+ body {
+            margin: 0;
+            min-height: 100vh;
+            background: black;
+            color: #1c1e1c;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+ body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+              repeating-linear-gradient(
+                180deg,
+                rgba(0,255,65,0.15) 0px,
+                rgba(0,255,65,0.15) 1px,
+                transparent 1px,
+                transparent 4px
+              );
+            pointer-events: none;
+        }

@@ -1,0 +1,151 @@
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== FONDO DEPORTIVO ===== */
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+/* ===== CONTENEDOR LOGIN ===== */
+.login-container{
+    background: rgba(255,255,255,0.95);
+    padding:40px;
+    width:380px;
+    border-radius:15px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.4);
+    text-align:center;
+    animation: aparecer 0.6s ease;
+}
+
+/* animación */
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== TITULO ===== */
+.login-container h1{
+    color:#1b5e20;
+    margin-bottom:10px;
+}
+
+.login-container p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+/* ===== FORMULARIO ===== */
+
+.form-group{
+    text-align:left;
+    margin-bottom:18px;
+}
+
+.form-group label{
+    font-weight:600;
+    font-size:14px;
+    color:#333;
+}
+
+.form-group input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:15px;
+    transition:0.2s;
+}
+
+.form-group input:focus{
+    border-color:#28a745;
+    outline:none;
+    box-shadow:0 0 5px rgba(40,167,69,0.5);
+}
+
+/* ===== PASSWORD GROUP ===== */
+
+.input-group{
+    display:flex;
+}
+
+.input-group input{
+    border-right:none;
+    border-radius:6px 0 0 6px;
+}
+
+.input-group-text{
+    background:#28a745;
+    color:white;
+    border-radius:0 6px 6px 0;
+    padding:10px 12px;
+}
+
+/* ===== BOTON ===== */
+
+.btn-primary{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
+    background: linear-gradient(135deg,#28a745,#1e7e34);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+.btn-primary:hover{
+    background: linear-gradient(135deg,#218838,#145c2c);
+    transform: translateY(-2px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ===== LINK RECUPERAR ===== */
+
+a{
+    transition:0.2s;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* ===== MENSAJES ===== */
+
+.error-msg{
+    background:#ffe5e5;
+    color:#b30000;
+    padding:10px;
+    border-radius:6px;
+    margin-bottom:15px;
+    font-size:14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width:480px){
+
+.login-container{
+    width:90%;
+    padding:30px;
+}
+
+}

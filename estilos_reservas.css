@@ -1,0 +1,605 @@
+/* Importar una fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #28a745;
+    --danger-color: #dc3545;
+    --bg-color: #f0f2f5;
+    --text-color: #1c1e21;
+    --card-bg: #ffffff;
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Encabezado */
+header {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0;
+    text-align: center;
+
+}
+
+.user-welcome {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Mensajes de Estado */
+.mensaje-exito, .mensaje-error {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.mensaje-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Formulario */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+input[type="date"], select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e4e8;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fafbfc;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.1);
+}
+
+/* Botones */
+
+.btn-primary {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+     padding: 16px ;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+     
+    
+}
+
+.btn-primary:hover {
+    background-color: #004494;
+    transform: translateY(-1px);
+    
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    
+}
+
+.btn-logout {
+    background-color: #f8f9fa;
+    color: var(--danger-color);
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+/* Lista de Reservas */
+.reservas-list {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.reserva-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.reserva-info strong {
+    color: var(--primary-color);
+}
+/* Contenedor de la Galería */
+.cabin-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.cabin-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: background-color .3s, box-shadow .3s, transform .2s;
+    border: 3px solid transparent;
+    cursor: pointer;
+}
+
+.cabin-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.cabin-card .info {
+    padding: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Reemplaza o actualiza estas reglas en tu CSS */
+
+.cabin-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+
+/* Contenedor de las 4 fotos */
+.cabin-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    grid-template-rows: 100px 100px;  /* 2 filas de 100px cada una */
+    gap: 2px; /* Espacio mínimo entre fotos */
+    background-color: #eee; /* Color de fondo por si falta una foto */
+}
+
+.cabin-image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que las fotos no se deformen */
+    transition: opacity 0.3s;
+}
+
+.cabin-card:hover .cabin-image-grid img {
+    opacity: 0.9;
+}
+
+.cabin-card .info {
+    padding: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: #fff;
+}
+
+
+/* Clase para resaltar la cabaña seleccionada */
+.cabin-card.active {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 86, 179, 0.2);
+}
+
+
+.grid-reservas {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.reserva-item {
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s;
+}
+
+.reserva-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.reserva-info strong {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.reserva-info span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.badge-check {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.btn-cancelar {
+    background-color: transparent;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    padding: 4px 15px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    
+}
+
+.btn-cancelar:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.reserva-item {
+    /* Ajuste para que el botón y la info se alineen bien */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ubicacion {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.ubicacion h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.mapa-container {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.mapa-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* El contenedor del Lightbox */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro transparente */
+    justify-content: center;
+    align-items: center;
+}
+
+/* La imagen agrandada */
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: zoomIn 0.3s ease;
+}
+
+/* Animación de entrada */
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Botón de cerrar */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Cambio de cursor en las miniaturas para avisar que son clicables */
+.cabin-image-grid img {
+    cursor: zoom-in;
+}
+.btn-invitados {
+    background: #e9ecef;
+    border: 1px solid #ced4da;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.form-invitado-mini {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 8px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.form-invitado-mini input, .form-invitado-mini select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-add {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.lista-invitados-cargados {
+    list-style: none;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: #444;
+}
+.btn-voucher {
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+/* Altura del slider (más chatito) */
+.slider-img {
+  height: 200px;           /* ajustá acá */
+  object-fit: cover;
+}
+
+
+
+/* Contenedor del texto */
+.slider-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+}
+
+/* Texto */
+.slider-overlay h2 {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+.btn-confirmar-final {
+    background: #28a745; /* Verde éxito */
+    color: white;
+    border: none;
+     padding: 4px 10px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-confirmar-final:hover {
+    background: #218838;
+}
+
+@media (max-width: 600px) {
+    .cabin-gallery { grid-template-columns: 1fr; }
+}
+/*menu hamburgesa estilo*/
+/* Contenedor principal del header */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Empuja contenido a los extremos */
+    align-items: center;            /* Centra verticalmente */
+    width: 100%;
+    max-width: 1200px;             /* Ajusta según tu diseño */
+    margin: 0 auto;
+}
+
+/* En escritorio (PC) */
+@media (min-width: 993px) {
+    .menu-toggle {
+        display: none; /* Esconde el botón hamburguesa en PC */
+    }
+    
+    .main-nav ul {
+        display: flex;
+     
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.reserva-acciones{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+
+/* --- ESTILOS RESPONSIVE PARA LA TABLA DE INVITADOS --- */
+
+/* Contenedor principal de la sección de invitados para dar aire */
+[id^="seccion-inv-"] {
+    padding: 10px;
+    background-color: #fdfdfd;
+}
+
+/* Asegurar que la tabla no se desborde */
+.table-invitados-responsive {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+/* Ocultar el encabezado de la tabla (Nombre, DNI, etc.) en móviles */
+@media (max-width: 768px) {
+    .table-invitados-responsive thead {
+        display: none;
+    }
+
+    /* Convertir cada fila (<tr>) en una "tarjeta" vertical */
+    .table-invitados-responsive tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    /* Convertir cada celda (<td>) en una línea de datos */
+    .table-invitados-responsive td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        padding: 5px 0;
+        text-align: right;
+        font-size: 0.9rem;
+    }
+
+    /* Generar los etiquetas (Nombre:, DNI:, etc.) dinámicamente con CSS */
+    .table-invitados-responsive td::before {
+        content: attr(data-label); /* Lee el texto del atributo data-label del HTML */
+        font-weight: bold;
+        color: #5d4037;
+        text-align: left;
+        margin-right: 15px;
+    }
+}
+
+
+/* Estilo para las iniciales de los días (Lu, Ma, Mi...) */
+.flatpickr-weekday {
+    background: rgb(67, 149, 93) !important; /* El mismo verde que tu encabezado */
+    color: #ffffff !important;
+    font-weight: bold !important;
+    font-size: 0.9em;
+}
+
+
+/* Clase que aplicaremos a la cabaña seleccionada */
+.cabin-card.selected {
+    border: 3px solid #4b5320; /* Contorno verde militar */
+    box-shadow: 0 0 15px rgba(75, 83, 32, 0.6); /* Sombra verde militar */
+    transform: scale(1.02); /* Un pequeño aumento para resaltar */
+    transition: all 0.3s ease;
+}
+
+/* Opcional: mejorar el cursor para que sepa que es clickable */
+.cabin-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+

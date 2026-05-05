@@ -1,0 +1,179 @@
+:root {
+    --color-deportivo-verde: #28a745; /* Verde pasto */
+    --color-deportivo-azul: #084587;  /* Azul equipo */
+    --color-deportivo-oscuro: #1a1a1b; /* Negro árbitro */
+    --color-deportivo-acento: #ffc107; /* Amarillo trofeo */
+    --fuente-deportiva: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    font-family: var(--fuente-deportiva);
+}
+/*encabezado donde sale el nombre del admin de deportes*/
+
+.admin-nombre {
+  background: linear-gradient(135deg, #f8f9fa, #dee2e6);
+  color: #212529;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  
+}
+
+/* Encabezado con estilo de Estadio */
+h2 {
+    color: var(--color-deportivo-azul);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -1px;
+    border-left: 10px solid var(--color-deportivo-verde);
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de la Tabla */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Tabla tipo Marcador (Scoreboard) */
+#tablaReservas {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    border: none;
+}
+
+#tablaReservas thead th {
+    background-color: var(--color-deportivo-azul);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border: none;
+    padding: 15px;
+}
+
+#tablaReservas tbody tr {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+#tablaReservas tbody tr:hover {
+    transform: scale(1.01);
+    background-color: #f8fff9;
+}
+
+#tablaReservas td {
+    padding: 20px;
+    vertical-align: middle;
+    border: none;
+    font-weight: 500;
+}
+
+/* Botones con estilo de Acción */
+.btn-success {
+    background-color: var(--color-deportivo-verde);
+    border: none;
+    border-radius: 50px; /* Estilo píldora/pista */
+    padding: 8px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+/* Modal de Rechazo - Estilo Tarjeta Roja */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+    overflow: hidden;
+}
+
+.modal-header.bg-danger {
+    background: linear-gradient(45deg, #d32f2f, #f44336) !important;
+}
+
+.modal-header h5 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Input y Textarea */
+.form-control {
+    border-radius: 10px;
+    border: 2px solid #eee;
+    padding: 12px;
+}
+
+.form-control:focus {
+    border-color: var(--color-deportivo-verde);
+    box-shadow: none;
+}
+
+/* Personalización de DataTables */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: var(--color-deportivo-azul) !important;
+    color: white !important;
+    border-radius: 5px;
+    border: none;
+}
+
+/* aca pongo la imgen de fondo */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("imagenes/atleta.png");
+    background-size: cover;          /* Que cubra toda la pantalla */
+    background-position: center;     /* Centrada */
+    background-repeat: no-repeat;    /* Que no se repita */
+    background-attachment: fixed;    /* Efecto tipo parallax */
+}
+
+.footer  {
+  background-color:rgba(2, 29, 58, 0.93);
+  color:#e3e8ee83;  
+  padding: 20px 10px;
+  text-align: center;
+   
+}
+
+/* boton cerrar sesion */
+
+.btn-logout{
+    background: linear-gradient(135deg,#dc3545,#b02a37);
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-logout:hover{
+    background: linear-gradient(135deg,#c82333,#8b1e2b);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.btn-logout:active{
+    transform: translateY(0px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
