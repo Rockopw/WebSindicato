@@ -180,7 +180,7 @@
             <h2>Contacto</h2>
             <p>¿Tenés alguna pregunta? ¡Contactanos!</p>
             <p>Teléfono: 4426851 - 4428848</p>
-            <p>Email: sposm@gmail.com</p>
+            <p>Email: info@sindicatodelpersonaldeobrassanit.com.ar</p>
             <p>Dirección: Dirección: Tambor de Tacuarí 2807, Posadas Misiones</p>
         </section>
 <?php
