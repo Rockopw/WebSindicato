@@ -120,7 +120,7 @@
 
                         <nav class="main-nav" id="mainNav">
                             <ul>
-                                <li><a href="menu.php"><i class="fas fa-home"></i> Inicio</a></li>
+                                <li><a href="index.php"><i class="fas fa-home"></i> Inicio</a></li>
                                 <li><a href="reserva_cabaña.php">Cabañas</a></li>
                                 <li><a href="departamentos/reserva_departamentos.php">Alojamiento</a></li>
                                 <li><a href="quincho/reserva_quincho.php">Quincho</a></li>

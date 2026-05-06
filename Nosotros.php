@@ -93,7 +93,7 @@
 
                         <nav class="main-nav" id="mainNav">
                             <ul>
-                                <li><a href="menu.php"><i class="fas fa-home"></i> Inicio</a></li>
+                                <li><a href="index.php"><i class="fas fa-home"></i> Inicio</a></li>
                                 <li><a href="#contacto">Contacto</a></li>
                         
                             </ul>
