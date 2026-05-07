@@ -97,7 +97,8 @@
                                 <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
                                 <li><a href="Nosotros.php">Nosotros</a></li>
                                 <li><a href="#novedades">Novedades</a></li>
-                                <li><a href="espacio_de_reservas.php">Reservas</a></li>
+                                <li><a href="imagenes/SITIO-EN-CONSTRUCCION.jpg">Reservas</a></li>
+                                <!--<li><a href="espacio_de_reservas.php">Reservas</a></li>-->
                                 <li><a href="#contacto">Contacto</a></li>
                         
                             </ul>
