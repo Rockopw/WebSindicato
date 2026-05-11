@@ -196,7 +196,7 @@
 
 
             <footer class="footer">
-                 <p>&copy;2025 Sindicato de Obras Sanitarias Misiones. Todos los derechos reservados desarrollado por Ruben D. Galeano Consultor IT - mail: rubengaleano83@gmai.com.</p>
+                 <p>&copy;2026 Sindicato de Obras Sanitarias Misiones. Todos los derechos reservados desarrollado por Ruben D. Galeano Consultor IT - mail: rubengaleano83@gmai.com.</p>
                  <div class="social-buttons">
                     <a href="https://www.facebook.com/gremialessposm.obrassanitariasmisiones/?locale=es_LA" target="_blank" class="social-button facebook">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
