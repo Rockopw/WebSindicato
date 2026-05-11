@@ -134,7 +134,7 @@
                 <p>&nbsp;</p> <!-- dejo un parrafo vacio -->
                 <div class="news-grid">
                 
-                    <!-- Noticia de Ejemplo 1 -->
+                    <!-- Noticia 1 -->
                     <div class="news-card">
                         <img src="imagenes/pato.jpeg" alt="Imagen Noticia 1">
                         <div class="card-content">
@@ -150,7 +150,7 @@
                         </div>
                     </div>
 
-                    <!-- Noticia de Ejemplo 2 -->
+                    <!-- Noticia 2 -->
                     <div class="news-card">
                         <img src="imagenes/novedades 2.jpeg" alt="Compromiso">
                         <div class="card-content">
@@ -160,13 +160,13 @@
                         </div>
                     </div>
 
-                    <!-- Noticia de Ejemplo 3 -->
+                    <!-- Noticia 3 -->
                     <div class="news-card">
-                        <img src="imagenes/torneo de futbol.jpg" alt="dia del trabajador sanitarista">
+                        <img src="imagenes/15demayo.jpeg" alt="Dia del trabajador sanitarista">
                         <div class="card-content">
-                            <h3>¡Torneo de Futbol 5!</h3>
-                            <p>Este 15 de Mayo se realizara un torneo de futbol 5 en el complejo deportivo Mbarete</p>
-                            <a href="#" class="read-more">Leer más</a>
+                            <h3>¡15 de Mayo!</h3>
+                            <p>En el marco del 15 de Mayo, Día del Trabajador Sanitarista, los invitamos a compartir una jornada de encuentro, recreación y compañerismo en Puerto Iguazú...</p>
+                            <a href="novedades3.php" class="read-more">Leer más</a>
                         </div>
                     </div>
                     
@@ -180,7 +180,7 @@
  <section id="contacto" class="info-section">
             <h2>Contacto</h2>
             <p>¿Tenés alguna pregunta? ¡Contactanos!</p>
-            <p>Teléfono: 4426851 - 4428848</p>
+            <p>Teléfono:  376 422-9767</p>
             <p>Email: info@sindicatodelpersonaldeobrassanit.com.ar</p>
             <p>Dirección: Dirección: Tambor de Tacuarí 2807, Posadas Misiones</p>
         </section>
